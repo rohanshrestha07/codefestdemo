@@ -36,12 +36,12 @@ export default function DashBoard() {
                     <p className="text-lg font-bold text-gray-400">Present</p>
                 </div>
                 <div className="bg-white p-4 rounded-md shadow space-y-2">
-                    <h3 className="text-5xl font-bold">30</h3>
-                    <p className="text-lg font-bold text-gray-400">Review</p>
+                    <h3 className="text-5xl font-bold">5</h3>
+                    <p className="text-lg font-bold text-gray-400">Leave Requests</p>
                 </div>
                 <div className="bg-white p-4 rounded-md shadow space-y-2">
                     <h3 className="text-5xl font-bold">25</h3>
-                    <p className="text-lg font-bold text-gray-400">Pending Client</p>
+                    <p className="text-lg font-bold text-gray-400">Pending Bookings</p>
                 </div>
             </div>
 

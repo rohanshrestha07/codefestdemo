@@ -3,6 +3,8 @@ import RegisterUser from "../AdminDashboard/RegisterUser";
 import AdminDashBoard from "../AdminDashboard/AdminDashboard";
 import DashBoard from "../AdminDashboard/DashBoard";
 import Attendance from "../AdminDashboard/Attendance";
+import PendingBooking from "../AdminDashboard/PendingBooking";
+import HostelerList from "../AdminDashboard/HostelerList";
 
 export default function AppRoutes() {
     return (
@@ -10,6 +12,8 @@ export default function AppRoutes() {
             <Route path="/admindashboard" element={<AdminDashBoard children={<DashBoard />} />} />
             <Route path="/admindashboard/registeruser" element={<AdminDashBoard children={<RegisterUser />} />} />
             <Route path="/admindashboard/attendance" element={<AdminDashBoard children={<Attendance />} />} />
+            <Route path="/admindashboard/pendingbooking" element={<AdminDashBoard children={<PendingBooking />} />} />
+            <Route path="/admindashboard/hostelerlist" element={<AdminDashBoard children={<HostelerList />} />} />
         </Routes>
     );
 }
