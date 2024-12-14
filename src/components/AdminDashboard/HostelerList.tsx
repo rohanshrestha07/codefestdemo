@@ -152,6 +152,7 @@ const HostelerList = () => {
         </table>
       </div>
 
+
     </div>
   );
 };

@@ -13,6 +13,7 @@ import SupportAgentOutlinedIcon from '@mui/icons-material/SupportAgentOutlined';
 import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
 import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined';
+import FormatListNumberedOutlinedIcon from '@mui/icons-material/FormatListNumberedOutlined';
 import { NavLink } from 'react-router-dom';
 
 export default function SideBar() {
@@ -26,24 +27,34 @@ export default function SideBar() {
       <h2 className="text-xl font-bold mb-6">Mero Hostel Mate</h2>
       <nav>
         <ul className="space-y-3">
-          {/* Dashboard Link */}
-          <NavLink 
-            to="/admindashboard" 
-            className={({ isActive }) => 
-              isActive 
-                ? 'p-3 flex items-center rounded-lg bg-gray-800 text-white' 
+        {/* Dashboard Link */}
+        <NavLink
+            to="/admindashboard"
+            className={({ isActive }) =>
+                isActive
+                ? 'p-3 flex items-center rounded-lg bg-gray-800 text-white'
                 : 'p-3 flex items-center rounded-lg text-gray-600 hover:text-gray-900'
-            }
-          >
-            <HomeOutlinedIcon />
-            <span className="ml-2">Dashboard</span>
-          </NavLink>
+                }
+            end // Ensures only exact /admindashboard path is active
+            >
+                <HomeOutlinedIcon />
+                <span className="ml-2">Dashboard</span>
+            </NavLink>
 
           {/* Create Hostel Link (Static) */}
-          <li className="text-gray-600 hover:text-gray-900 p-3 flex items-center">
-            <AddHomeOutlinedIcon />
-            <span className="ml-2">Create Hostel</span>
-          </li>
+          <li>
+            <NavLink 
+                to="/admindashboard/createhostel" 
+                className={({ isActive }) => 
+                    isActive 
+                        ? 'p-3 flex items-center rounded-lg bg-gray-800 text-white' 
+                        : 'p-3 flex items-center rounded-lg text-gray-600 hover:text-gray-900'
+                    }
+                >
+                    <AddHomeOutlinedIcon/>
+                    <span className="ml-2">Create Hostel</span>
+                </NavLink>
+                </li>
 
           {/* Hostelers Details with Dropdown */}
           <li>
@@ -66,6 +77,7 @@ export default function SideBar() {
                         : 'p-3 flex items-center rounded-lg text-gray-600 hover:text-gray-900'
                     }
                   >
+                    <FormatListNumberedOutlinedIcon/>
                     <span className="ml-2">Hosteller List</span>
                   </NavLink>
                 </li>
